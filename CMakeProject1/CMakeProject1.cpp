@@ -7,8 +7,7 @@ using namespace std;
 Collection FlashCard;
 
 void Practicing() {
-	system("cls");
-	srand(time(0));
+	
 	if (FlashCard.isEmpty()) {
 		cout << "There is no word !";
 		getchar();
@@ -17,6 +16,7 @@ void Practicing() {
 
 	cout << "Welcome to FlashCard , Let's Start Practicing !" << endl;
 	while (true) {
+		system("cls");
 		for (int i = 0; i < 5; i++) {
 			Card queryCard = FlashCard.getaNewWord();
 			cout << queryCard.getWord()<<endl;
@@ -51,15 +51,16 @@ void Practicing() {
 
 		Card queryCard = FlashCard.getaMasteredWord();
 		cout << queryCard.getWord() << endl;
-		cout << "Do you know this Word ?? [y/n]:";
+		cout << "Do you know this Word ?? [Y/N]:";
 		char What;
 		cin >> What;
-		if (What == 'y') {
+		if (What == 'Y') {
 			queryCard.increaseCorrectAnswer();
 			cout << "Well Done!" << endl;
 		}
 		else {
-			cout << "Sorry to Hear that !";
+			cout << "Sorry to Hear that !" << endl;
+			cout << queryCard;
 		}
 	}
 	return;

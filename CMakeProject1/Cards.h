@@ -51,4 +51,5 @@ public:
   void addSynonyms(string synonyms);
   void assignSynonyms(vector<string>& v);
   void increaseCorrectAnswer();
+  void increaseCorrectAnswerBy(int);
 };

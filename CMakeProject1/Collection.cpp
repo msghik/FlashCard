@@ -106,15 +106,18 @@ int Collection::masteredWordsSize()
 
 Card Collection::getaNewWord()
 {
+	srand(time(NULL));
 	return New[rand()%New.size()];
 }
 
 Card Collection::getaLearningWord()
 {
+	srand(time(NULL));
 	return Learning[rand() % Learning.size()];
 }
 
 Card Collection::getaMasteredWord()
 {
+	srand(time(NULL));
 	return Mastered[rand() % Mastered.size()];
 }

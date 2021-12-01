@@ -46,6 +46,15 @@ void Card::increaseCorrectAnswer()
 	this->CorrectAnswers++;
 }
 
+void Card::increaseCorrectAnswerBy(int number)
+{
+	if (this->CorrectAnswers == 0) {
+		return;
+	}
+	this->CorrectAnswers += number;
+	return ;
+}
+
 istream& operator>>(istream& in, Card& card)
 {
 	string word, meaning, synonym;
